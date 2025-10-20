@@ -3,106 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>九宫格布局网站</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>长沙小凯工业设计有限公司</title>
     <style>
-        .grid-item {
-            transition: all 0.3s ease;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", Arial, sans-serif;
         }
-        .grid-item:hover {
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: white;
+            padding: 40px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .main-title {
+            font-size: 2.8em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .sub-title {
+            font-size: 1.4em;
+            color: #7f8c8d;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-section {
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .company-intro {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .feature-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .services-section {
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .service-tag {
+            background: #eaf2f8;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            color: #2c3e50;
+            border: 1px solid #3498db;
+        }
+
+        .contact-section {
+            background: #2c3e50;
+            color: white;
+            padding: 50px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-title {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .phone-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
+            margin: 20px 0;
+            letter-spacing: 1px;
+        }
+
+        .contact-info {
+            margin: 20px 0;
+            font-size: 1.1em;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+        }
+
+        .cta-button:hover {
+            background: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #7f8c8d;
+            margin-top: 50px;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.2em;
+            }
+            .sub-title {
+                font-size: 1.2em;
+            }
+            .hero-section, .services-section {
+                padding: 30px 20px;
+            }
+            .phone-number {
+                font-size: 1.6em;
+            }
         }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen">
-    <header class="bg-white shadow-sm">
-        <div class="container mx-auto px-4 py-6">
-            <h1 class="text-3xl font-bold text-gray-800 text-center">九宫格布局展示</h1>
-            <p class="text-gray-600 text-center mt-2">响应式设计，支持移动端浏览</p>
-        </div>
-    </header>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="main-title">长沙小凯工业设计有限公司</h1>
+            <h2 class="sub-title">专业电子产品解决方案商，提供交钥匙解决方案</h2>
+        </header>
 
-    <main class="container mx-auto px-4 py-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <!-- 区域1 -->
-            <div class="grid-item rounded-xl p-6 text-white flex flex-col items-center justify-center">
-                <i class="fas fa-palette text-4xl mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">设计创意</h3>
-                <p class="text-center">展示您的设计作品和创意想法</p>
+        <section class="hero-section">
+            <h2 class="section-title">公司简介</h2>
+            <div class="company-intro">
+                <p>长沙小凯工业设计有限公司是一家专注于电子产品设计与制造的高新技术企业。凭借多年的行业经验和技术积累，我们为客户提供从概念设计到量产交付的全方位解决方案。</p>
+                
+                <p>作为专业的OEM/ODM/JDM制造商，我们拥有卓越的本地化服务能力、出色的研发实力和完善的供应链体系。在电子产品定制领域深耕多年，我们致力于为客户提供最优质的产品和最完善的服务。</p>
+                
+                <p>我们的团队由经验丰富的工程师、设计师和项目经理组成，能够快速响应客户需求，提供创新的产品解决方案，确保项目按时高质量完成。</p>
             </div>
 
-            <!-- 区域2 -->
-            <div class="grid-item rounded-xl p-6 text-white flex flex-col items-center justify-center">
-                <i class="fas fa-code text-4xl mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">技术开发</h3>
-                <p class="text-center">分享编程技术和开发经验</p>
+            <h2 class="section-title">核心优势</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>专业研发团队</h3>
+                    <p>拥有资深的工程师和技术专家团队，具备强大的产品研发和创新能力，持续推动技术进步</p>
+                </div>
+                <div class="feature-card">
+                    <h3>完善供应链</h3>
+                    <p>建立了稳定可靠的供应链体系，与优质供应商长期合作，确保产品质量和交付时效</p>
+                </div>
+                <div class="feature-card">
+                    <h3>定制化服务</h3>
+                    <p>根据客户需求提供个性化的产品设计和制造解决方案，满足多样化市场需求</p>
+                </div>
+                <div class="feature-card">
+                    <h3>品质保证</h3>
+                    <p>严格的质量控制体系，从原材料到成品全程监控，确保每一件产品都符合最高标准</p>
+                </div>
             </div>
+        </section>
 
-            <!-- 区域3 -->
-            <div class="grid-item rounded-xl p-6 text-white flex flex-col items-center justify-center">
-                <i class="fas fa-camera text-4xl mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">摄影作品</h3>
-                <p class="text-center">展示精彩的摄影作品集</p>
+        <section class="services-section">
+            <h2 class="section-title">产品与服务</h2>
+            <p>我们专注于各类电子产品的设计、开发与制造，主要产品包括但不限于：</p>
+            <div class="services-list">
+                <span class="service-tag">血压监测仪</span>
+                <span class="service-tag">雾化器</span>
+                <span class="service-tag">数字温度计</span>
+                <span class="service-tag">红外温度计</span>
+                <span class="service-tag">电子秤</span>
+                <span class="service-tag">BFR设备</span>
+                <span class="service-tag">医疗电子产品</span>
+                <span class="service-tag">健康监测设备</span>
+                <span class="service-tag">智能家居产品</span>
             </div>
+            <p style="margin-top: 20px;">我们提供完整的交钥匙解决方案，涵盖产品设计、工程开发、原型制作、批量生产、质量测试和物流配送等全流程服务。</p>
+        </section>
 
-            <!-- 区域4 -->
-            <div class="grid-item rounded-xl p-6 text-white flex flex-col items-center justify-center">
-                <i class="fas fa-book text-4xl mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">学习笔记</h3>
-                <p class="text-center">记录学习心得和知识总结</p>
+        <section class="contact-section">
+            <h3 class="contact-title">联系我们</h3>
+            <p>欢迎垂询，我们将为您提供专业的咨询服务</p>
+            <div class="phone-number">+86 18570081859</div>
+            <div class="contact-info">
+                <p>邮箱：contact@xiaokai-design.com</p>
+                <p>地址：湖南省长沙市高新技术产业开发区</p>
             </div>
+            <a href="tel:+8618570081859" class="cta-button">立即致电</a>
+        </section>
 
-            <!-- 区域5 - 中央重点区域 -->
-            <div class="grid-item rounded-xl p-6 text-white flex flex-col items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500">
-                <i class="fas fa-star text-4xl mb-4"></i>
-                <h3 class="text-2xl font-bold mb-2">核心内容</h3>
-                <p class="text-center">这是最重要的展示区域</p>
-                <button class="mt-4 px-4 py-2 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    了解更多
-                </button>
-            </div>
-
-            <!-- 区域6 -->
-            <div class="grid-item rounded-xl p-6 text-white flex flex-col items-center justify-center">
-                <i class="fas fa-music text-4xl mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">音乐欣赏</h3>
-                <p class="text-center">分享喜爱的音乐和播放列表</p>
-            </div>
-
-            <!-- 区域7 -->
-            <div class="grid-item rounded-xl p-6 text-white flex flex-col items-center justify-center">
-                <i class="fas fa-utensils text-4xl mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">美食制作</h3>
-                <p class="text-center">展示美食制作过程和食谱</p>
-            </div>
-
-            <!-- 区域8 -->
-            <div class="grid-item rounded-xl p-6 text-white flex flex-col items-center justify-center">
-                <i class="fas fa-running text-4xl mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">运动健康</h3>
-                <p class="text-center">分享运动经验和健康生活</p>
-            </div>
-
-            <!-- 区域9 -->
-            <div class="grid-item rounded-xl p-6 text-white flex flex-col items-center justify-center">
-                <i class="fas fa-heart text-4xl mb-4"></i>
-                <h3 class="text-xl font-semibold mb-2">生活感悟</h3>
-                <p class="text-center">记录生活中的点滴感悟</p>
-            </div>
-        </div>
-    </main>
-
-    <footer class="bg-white mt-12 py-6 border-t">
-        <div class="container mx-auto px-4 text-center text-gray-600">
-            <p>© 2025 九宫格布局网站 - 使用 Tailwind CSS 构建</p>
-            <div class="mt-4 space-x-4">
-                <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-twitter"></i> Twitter</a>
-                <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-weibo"></i> 微博</a>
-            </div>
-        </div>
-    </footer>
+        <footer>
+            <p>&copy; 2025 长沙小凯工业设计有限公司 版权所有</p>
+            <p style="margin-top: 10px;">专业电子产品解决方案提供商</p>
+        </footer>
+    </div>
 </body>
 </html>
