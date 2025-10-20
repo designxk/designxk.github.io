@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -104,6 +105,26 @@
         .feature-card p {
             color: #666;
             line-height: 1.6;
+        }
+
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-image:hover {
+            transform: scale(1.05);
         }
 
         .services-section {
@@ -236,6 +257,27 @@
                     <p>严格的质量控制体系，从原材料到成品全程监控，确保每一件产品都符合最高标准</p>
                 </div>
             </div>
+
+            <!-- 添加电子产品图片展示区域 -->
+            <h2 class="section-title">产品展示</h2>
+            <div class="product-gallery">
+                <div>
+                    <img src="https://picsum.photos/id/1/600/400" alt="智能医疗设备" class="product-image">
+                    <p style="text-align: center; margin-top: 15px; color: #666;">智能医疗电子产品</p>
+                </div>
+                <div>
+                    <img src="https://picsum.photos/id/20/600/400" alt="健康监测仪器" class="product-image">
+                    <p style="text-align: center; margin-top: 15px; color: #666;">健康监测设备</p>
+                </div>
+                <div>
+                    <img src="https://picsum.photos/id/30/600/400" alt="工业设计产品" class="product-image">
+                    <p style="text-align: center; margin-top: 15px; color: #666;">工业电子产品设计</p>
+                </div>
+                <div>
+                    <img src="https://picsum.photos/id/96/600/400" alt="医生为小朋友听诊检查" class="product-image">
+                    <p style="text-align: center; margin-top: 15px; color: #666;">医疗设备临床应用场景</p>
+                </div>
+            </div>
         </section>
 
         <section class="services-section">
@@ -260,7 +302,7 @@
             <p>欢迎垂询，我们将为您提供专业的咨询服务</p>
             <div class="phone-number">+86 18570081859</div>
             <div class="contact-info">
-                <p>邮箱：contact@xiaokai-design.com</p>
+                <p>邮箱：zhujunmeiez@gmail.com</p>
                 <p>地址：湖南省长沙市高新技术产业开发区</p>
             </div>
             <a href="tel:+8618570081859" class="cta-button">立即致电</a>
