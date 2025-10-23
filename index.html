@@ -304,3 +304,54 @@
 </html>
 <code_end>
 <code_start project_name=GitHub数据提交表单 filename=README.md title=项目说明文档 entrypoint=false runnable=false project_final_file=true>
+# GitHub数据提交表单
+
+这是一个可以将用户提交的姓名和电话信息自动保存为TXT文件到GitHub仓库的网页应用。
+
+## 功能特点
+
+- 📝 简洁的表单界面，支持姓名和电话输入
+- 🔒 数据验证，确保输入格式正确
+- ☁️ 自动将数据保存到GitHub仓库
+- ⚡ 实时状态反馈和错误提示
+- 💾 配置信息本地存储
+
+## 使用说明
+
+### 1. 准备工作
+- 创建GitHub个人访问令牌（需要repo权限）
+- 在GitHub上创建目标仓库（默认仓库名为"date"）
+
+### 2. 配置GitHub信息
+在表单顶部的配置区域填写：
+- **GitHub Token**: 你的个人访问令牌
+- **仓库所有者**: 你的GitHub用户名
+- **仓库名称**: 目标仓库名称（默认为"date"）
+
+### 3. 使用流程
+1. 点击"测试"按钮验证配置是否正确
+2. 填写姓名和电话信息
+3. 点击"提交到GitHub"完成数据保存
+
+### 4. GitHub Token获取方法
+1. 登录GitHub，进入Settings → Developer settings → Personal access tokens
+2. 点击"Generate new token"
+3. 勾选repo权限
+4. 生成并复制令牌
+
+## 技术特点
+
+- 使用GitHub REST API进行文件操作
+- 每个提交生成独立的TXT文件
+- 支持中文字符处理
+- 响应式设计，适配各种屏幕
+
+## 注意事项
+
+- 请妥善保管GitHub Token，不要在公共场合泄露
+- 确保目标仓库存在且有写入权限
+- 支持私有和公有仓库
+
+## 部署说明
+
+直接将index.html文件上传到GitHub Pages或任何静态网站托管服务即可运行。
