@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户信息提交表单</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-user-plus"></i> 用户信息收集</h1>
+            <p class="subtitle">请填写您的个人信息，我们将安全保存您的数据</p>
+        </header>
+
+        <main class="main-content">
+            <div class="form-container">
+                <form id="userForm" class="user-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">
+                            <i class="fas fa-user"></i> 姓名
+                        </label>
+                        <input type="text" id="name" name="name" class="form-input" 
+                                   placeholder="请输入您的姓名">
+                        <div class="error-message" id="nameError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label">
+                            <i class="fas fa-phone"></i> 电话号码
+                        </label>
+                        <input type="tel" id="phone" name="phone" class="form-input" 
+                                   placeholder="请输入您的电话号码">
+                        <div class="error-message" id="phoneError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">
+                            <i class="fas fa-envelope"></i> 邮箱地址
+                        </label>
+                        <input type="email" id="email" name="email" class="form-input" 
+                                   placeholder="请输入您的邮箱地址（可选）">
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address" class="form-label">
+                            <i class="fas fa-home"></i> 联系地址
+                        </label>
+                        <textarea id="address" name="address" class="form-textarea" 
+                                  placeholder="请输入您的联系地址（可选）"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> 提交信息
+                    </button>
+                </form>
+            </div>
+
+            <div class="status-container">
+                <div id="statusMessage" class="status-message hidden"></div>
+                <div class="loading-spinner hidden" id="loadingSpinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 用户信息收集系统 | 基于GitHub Pages</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
