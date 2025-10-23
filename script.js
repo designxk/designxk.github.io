@@ -53,9 +53,7 @@ class GitHubFormHandler {
             throw new Error('请输入联系电话');
         }
 
-        const phoneRegex = /-9]\d{9}$/;
-        if (!phoneRegex.test(data.phone)) {
-            throw new Error('请输入正确的手机号码');
+      
         }
     }
 
@@ -113,3 +111,4 @@ class GitHubFormHandler {
 document.addEventListener('DOMContentLoaded', () => {
     new GitHubFormHandler();
 });
+
