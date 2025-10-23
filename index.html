@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub内容提交表单</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-2xl">
+        <!-- 头部导航 -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">
+                <i class="fab fa-github mr-3 text-purple-600"></i>
+                GitHub内容提交器
+            </h1>
+            <p class="text-gray-600 text-lg">将您的内容直接保存到GitHub仓库</p>
+        </header>
+
+        <!-- 主功能区域 -->
+        <main class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+            <div class="mb-6">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-2">提交新内容</h2>
+                <p class="text-gray-500">填写以下表单，内容将自动保存到指定的GitHub仓库</p>
+            </div>
+
+            <!-- 配置面板 -->
+            <div class="bg-gray-50 rounded-xl p-6 mb-6">
+                <h3 class="text-lg font-medium text-gray-700 mb-4">GitHub配置</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">仓库所有者</label>
+                        <input type="text" id="repoOwner" placeholder="您的GitHub用户名" 
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">仓库名称</label>
+                        <input type="text" id="repoName" placeholder="目标仓库名" 
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">文件路径</label>
+                        <input type="text" id="filePath" placeholder="如：submissions/content.txt" 
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">GitHub Token</label>
+                        <input type="password" id="githubToken" placeholder="您的个人访问令牌" 
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 提交表单 -->
+            <form id="contentForm" class="space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">标题</label>
+                    <input type="text" id="title" required 
+                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all" 
+                           placeholder="请输入内容标题">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">内容</label>
+                    <textarea id="content" rows="6" required 
+                              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none" 
+                              placeholder="请输入您要提交的内容..."></textarea>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="appendMode" class="w-4 h-4 text-purple-600 border-gray-300 rounded focus:ring-purple-500">
+                        <label for="appendMode" class="ml-2 text-sm text-gray-600">追加模式（不覆盖现有内容）</label>
+                    </div>
+                    <button type="submit" 
+                            class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        提交到GitHub
+                    </button>
+                </div>
+            </form>
+        </main>
+
+        <!-- 状态显示区域 -->
+        <div class="bg-white rounded-2xl shadow-xl p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">提交历史</h3>
+            <div id="statusArea" class="space-y-4">
+                <div class="text-center text-gray-500 py-8">
+                    <i class="fas fa-history text-4xl mb-4"></i>
+                    <p>暂无提交记录</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页脚信息 -->
+        <footer class="text-center mt-12 text-gray-500">
+            <p>使用GitHub API实现内容提交 • 确保已配置正确的访问权限</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
