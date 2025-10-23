@@ -7,7 +7,7 @@ const CONFIG = {
     GITHUB_USERNAME: 'designxk',
     
     // 您的仓库名称
-    REPOSITORY_NAME: 'designxk',
+    REPOSITORY_NAME: 'date',
     
     // 数据保存路径
     DATA_PATH: 'submissions/data.json',
@@ -21,6 +21,7 @@ const CONFIG = {
 
 
 module.exports = CONFIG;
+
 
 
 
