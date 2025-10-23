@@ -15,11 +15,12 @@ const CONFIG = {
     // GitHub个人访问令牌
     // 生成方法：GitHub Settings -> Developer settings -> Personal access tokens
     // 需要授予 repo 权限
-    GITHUB_TOKEN: 'myaec'
+    GITHUB_TOKEN: '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'
 };
 
 
 
 module.exports = CONFIG;
+
 
 
