@@ -4,7 +4,7 @@ const GITHUB_CONFIG = {
     token: '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',  // 替换为您的GitHub个人访问令牌
     owner: 'designxk',                 // 替换为您的GitHub用户名
     repo: 'date',                 // 替换为您的仓库名称
-    filePath: 'data/submissions.json'       // 数据存储路径
+    filePath: 'date/data/submissions.json'       // 数据存储路径
 };
 
 // 本地存储键名
@@ -341,3 +341,4 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = GitHubSubmissionSystem;
 }
 <code_end>
+
