@@ -4,7 +4,7 @@ const GITHUB_CONFIG = {
     owner: 'designxk', // 替换为您的GitHub用户名
     repo: 'designxk',   // 替换为您的仓库名
     path: 'submissions/data.json',    // 数据保存路径
-    token: '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'       // 替换为您的GitHub个人访问令牌
+    token: 'myaec'       // 替换为您的GitHub个人访问令牌
 };
 
 // DOM元素
@@ -315,3 +315,4 @@ document.addEventListener('keydown', function(event) {
         closeModal();
     }
 });
+
