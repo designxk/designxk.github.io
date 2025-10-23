@@ -74,7 +74,7 @@
         // GitHub配置信息 - 在实际使用中请替换为真实值
         const GITHUB_CONFIG = {
             username: 'designxk',      // 替换为您的GitHub用户名
-            repository: 'designxk',    // 替换为您的仓库名称
+            repository: 'date' ,    // 替换为您的仓库名称
             token: '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'  // 替换为您的个人访问令牌
         };
 
@@ -134,7 +134,7 @@
                 }, null, 2);
 
                 // 准备API请求
-                const apiUrl = `https://api.github.com/repos/${GITHUB_CONFIG.username}/${GITHUB_CONFIG.repository}/contents/${name}_${timestamp.replace(/[:.]/g, '-')}.json`;
+                const apiUrl = `http://api.github.com/repos/${GITHUB_CONFIG.username}/${GITHUB_CONFIG.repository}/contents/${name}_${timestamp.replace(/[:.]/g, '-')}.json`;
                 
                 const response = await fetch(apiUrl, {
                     method: 'PUT',
@@ -184,5 +184,6 @@
     </script>
 </body>
 </html>
+
 
 
