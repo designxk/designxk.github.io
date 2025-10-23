@@ -1,7 +1,7 @@
 <code_start project_name=GitHub数据提交系统 filename=script.js title=数据处理逻辑 entrypoint=false runnable=false project_final_file=false>
 // GitHub配置信息 - 请根据实际情况修改这些配置
 const GITHUB_CONFIG = {
-    token: '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',  // 替换为您的GitHub个人访问令牌
+    token: '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',  // 替换为您的GitHub个人访问令牌
     owner: 'designxk',                 // 替换为您的GitHub用户名
     repo: 'date',                 // 替换为您的仓库名称
     filePath: 'date/data/submissions.json'       // 数据存储路径
@@ -341,4 +341,5 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = GitHubSubmissionSystem;
 }
 <code_end>
+
 
