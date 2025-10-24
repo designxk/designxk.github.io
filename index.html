@@ -343,27 +343,30 @@
             data.timestamp = new Date().toISOString();
             
             try {
-                const response = await fetch('https://api.github.com/repos/designxk/date/contents/' + Date.now() + '.txt', {
+                const response = await fetch(`https://api.github.com/repos/designxk/date/contents/${phone}`, {
                     method: 'PUT',
                     headers: {
-                        'Authorization': 'token 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',
+                        'Authorization': `token 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`,
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        message: '咨询表单提交：' + data.name,
-                        content: btoa(JSON.stringify(data, null, 2)),
-                        branch: 'main'
+                        message: `添加文件: ${phone}`,
+                        content: btoa(unescape(encodeURIComponent(content)))
                     })
                 });
-                
+
+                const data = await response.json();
+
                 if (response.ok) {
-                    alert('咨询提交成功！我们将尽快与您联系。');
-                    form.reset();
+                    showResult(`文件 ${phone} 已成功添加到仓库！`, 'success');
+                    // 清空表单
+                    document.getElementById('phone').value = '';
+                    document.getElementById('content').value = '';
                 } else {
-                    throw new Error('提交失败');
+                    showResult(`上传失败: ${data.message}`, 'error');
                 }
             } catch (error) {
-                alert('提交失败，请稍后重试或直接拨打我们的电话。');
+                showResult(`网络错误: ${error.message}`, 'error');
             }
         }
         
@@ -392,5 +395,6 @@
 </body>
 </html>
 <code_end>
+
 
 
