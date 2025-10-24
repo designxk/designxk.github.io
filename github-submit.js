@@ -23,7 +23,7 @@ class GitHubFormSubmitter {
             const response = await fetch(`${this.baseURL}/repos/${this.username}/${this.repo}/contents/${filename}`, {
                 method: 'PUT',
                 headers: {
-                    'Authorization': `Bearer ${this.token}`,
+                    'Authorization': `token ${this.token}`,
                     'Content-Type': 'application/json',
                     'Accept': 'application/vnd.github.v3+json'
                 },
@@ -107,5 +107,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 <code_end>
+
 
 
