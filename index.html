@@ -257,96 +257,35 @@
             </div>
         </div>
     </section>
-
-    <!-- 联系我们 -->
-    <section id="contact" class="py-20 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-12 fade-in">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">立即咨询</h2>
-                    <p class="text-gray-600 text-lg">
-                请填写以下表单，我们将尽快与您联系
-                    </p>
-            </div>
-            
-            <div class="bg-white rounded-xl shadow-lg p-8 fade-in">
-                <div class="form-group">
-            <label for="filename">文件名1</label>
+       <div class="form-container">
+        <h2>向GitHub仓库添加TXT文件</h2>
+        
+        <div class="form-group">
+            <label for="filename">文件名</label>
             <input type="text" id="filename" placeholder="例如：test.txt">
         </div>
 
         <div class="form-group">
-            <label for="content">文件内容1</label>
+            <label for="content">文件内容</label>
             <textarea id="content" rows="5" placeholder="请输入文件内容"></textarea>
         </div>
 
         <button onclick="uploadToGitHub()">上传到GitHub</button>
 
         <div id="result" class="result"></div>
+    </div>
 
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 页脚 -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center">
-                <p>&copy; 2025 小凯工业设计有限公司 版权所有</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // 平滑滚动函数
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({ 
-                behavior: 'smooth' 
-            });
-        }
-        
-        function scrollToServices() {
-            scrollToSection('services');
-        }
-        
-        function scrollToContact() {
-            scrollToSection('contact');
-        }
-        
-         
-        
-        // 添加滚动动画
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
-        
-        // 观察所有需要动画的元素
-        document.addEventListener('DOMContentLoaded', () => {
-            const elements = document.querySelectorAll('.fade-in');
-            elements.forEach(el => {
-                observer.observe(el);
-            });
-        });
-        
-            async function uploadToGitHub() {
+   <script>
+        async function uploadToGitHub() {
             const username = designxk;
             const repo = date;
-            const token = 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;
+            const token = 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;
             const filename = document.getElementById('filename').value;
             const content = document.getElementById('content').value;
 
             const resultDiv = document.getElementById('result');
             
-            if (!filename || !content) {
+            if (!username || !repo || !token || !filename || !content) {
                 showResult('请填写所有必填字段', 'error');
                 return;
             }
@@ -385,11 +324,21 @@
             resultDiv.className = `result ${type}`;
             resultDiv.style.display = 'block';
         }
-   
     </script>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center">
+                <p>&copy; 2025 小凯工业设计有限公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 </html>
 <code_end>
+
 
 
 
