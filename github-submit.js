@@ -7,7 +7,7 @@
  */
 
 class GitHubFormSubmitter {
-    constructor(username, token, repo = 'designxk/date') {
+    constructor(username, token, repo = 'date') {
         this.username = username;
         this.token = token;
         this.repo = repo;
@@ -107,4 +107,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 <code_end>
+
 
