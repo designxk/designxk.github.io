@@ -281,7 +281,7 @@
                         <div class="grid md:grid-cols-2 gap-6 mb-6">
                             <div>
                                <label for="content">电话</label>
-                               <textarea id="content" rows="5" placeholder="请输入文件内容"></textarea>
+                               <input type="text" id="content"  placeholder="请输入文件内容">
 
                             </div>
                          
@@ -328,9 +328,9 @@
         
         // 表单提交处理
             async function uploadToGitHub() {
-            const username = designxk;
+           const  username = designxk;
             const repo = date;
-            const token = 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;
+            const token = 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;
             const filename = document.getElementById('filename').value;
             const content = document.getElementById('content').value;
 
@@ -402,6 +402,7 @@
 </body>
 </html>
 <code_end>
+
 
 
 
