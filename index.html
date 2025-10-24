@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub文件创建器</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- 头部导航 -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <i class="fab fa-github text-2xl"></i>
+                    <h1 class="text-2xl font-bold">GitHub文件创建器</h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#create" class="hover:text-gray-200 transition-colors">创建文件</a>
+                    <a href="#docs" class="hover:text-gray-200 transition-colors">文档说明</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主功能区域 -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-2xl mx-auto">
+            <!-- 状态显示区域 -->
+            <div id="statusMessage" class="hidden mb-6 p-4 rounded-lg fade-in"></div>
+
+            <!-- 创建文件表单 -->
+            <div id="create" class="bg-white rounded-xl shadow-lg p-6 mb-8 fade-in">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">
+                    <i class="fas fa-file-alt mr-2"></i>创建TXT文件
+                </h2>
+                
+                <form id="fileForm" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                        个人访问令牌
+                        </label>
+                        <input type="password" id="token" 
+                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                               placeholder="输入GitHub个人访问令牌"
+                               required>
+                        <p class="text-xs text-gray-500 mt-1">需要在GitHub设置中生成具有repo权限的token</p>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                        仓库名称
+                        </label>
+                        <input type="text" id="repo" 
+                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                               placeholder="用户名/仓库名"
+                               required>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                        文件路径
+                        </label>
+                        <input type="text" id="filePath" 
+                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                               placeholder="example.txt 或 folder/example.txt"
+                               value="example.txt">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                        文件内容
+                        </label>
+                        <textarea id="fileContent" 
+                                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 h-32"
+                                  placeholder="输入文件内容...">这是一个通过GitHub API创建的示例文件。
+创建时间：2025年10月24日</textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                        提交信息
+                        </label>
+                        <input type="text" id="commitMessage" 
+                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                               placeholder="描述此次提交"
+                               value="通过JavaScript API创建txt文件">
+                    </div>
+
+                    <button type="submit" 
+                            class="w-full gradient-bg text-white py-3 px-4 rounded-md hover:opacity-90 transition-opacity font-semibold">
+                            <i class="fas fa-plus-circle mr-2"></i>创建文件
+                    </button>
+                </form>
+            </div>
+
+            <!-- 文档说明 -->
+            <div id="docs" class="bg-white rounded-xl shadow-lg p-6 fade-in">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">
+                    <i class="fas fa-book mr-2"></i>使用说明
+                </h2>
+                
+                <div class="space-y-4 text-gray-600">
+                    <div class="p-4 bg-blue-50 rounded-lg">
+                        <h3 class="font-semibold text-blue-800 mb-2">准备工作</h3>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li>在GitHub设置中生成个人访问令牌，确保具有repo权限</li>
+                        <li>准备一个已存在的GitHub仓库</li>
+                        <li>确保网络连接正常</li>
+                    </ul>
+                </div>
+
+                <div class="p-4 bg-green-50 rounded-lg">
+                    <h3 class="font-semibold text-green-800 mb-2">API请求流程</h3>
+                    <ol class="list-decimal list-inside space-y-1 text-sm">
+                        <li>使用PUT方法调用GitHub Contents API</li>
+                        <li>在请求头中包含认证信息</li>
+                        <li>构造包含文件内容和提交信息的JSON数据</li>
+                        <li>处理API响应并显示结果</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 GitHub文件创建器 - 基于GitHub API开发</p>
+        </div>
+    </footer>
+
+    <script>
+        class GitHubFileCreator {
+            constructor() {
+                this.form = document.getElementById('fileForm');
+                this.statusElement = document.getElementById('statusMessage');
+                this.init();
+            }
+
+            init() {
+                this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+            }
+
+            async handleSubmit(e) {
+                e.preventDefault();
+                
+                const token = document.getElementById('token').value;
+                const repo = document.getElementById('repo').value;
+                const filePath = document.getElementById('filePath').value;
+                const fileContent = document.getElementById('fileContent').value;
+                const commitMessage = document.getElementById('commitMessage').value;
+
+                this.showStatus('正在创建文件...', 'info');
+
+                try {
+                    const result = await this.createFile(token, repo, filePath, fileContent, commitMessage);
+                    this.showStatus(`文件创建成功！路径：${result.content.path}`, 'success');
+                } catch (error) {
+                    this.showStatus(`创建失败：${error.message}`, 'error');
+                }
+            }
+
+            async createFile(token, repo, filePath, content, message) {
+                const apiUrl = `https://api.github.com/repos/${repo}/contents/${filePath}`;
+
+                const requestData = {
+                    message: message,
+                    content: btoa(unescape(encodeURIComponent(content)))
+                };
+
+                const response = await fetch(apiUrl, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${token}`,
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/vnd.github.v3+json'
+                    },
+                    body: JSON.stringify(requestData)
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.message || `HTTP ${response.status}`);
+                }
+
+                return await response.json();
+            }
+
+            showStatus(message, type) {
+                const colors = {
+                    info: 'bg-blue-100 text-blue-800 border-blue-200',
+                    success: 'bg-green-100 text-green-800 border-green-200',
+                    error: 'bg-red-100 text-red-800 border-red-200'
+                };
+
+                this.statusElement.className = `p-4 rounded-lg border fade-in ${colors[type]}`;
+                this.statusElement.innerHTML = `
+                    <div class="flex items-center">
+                        <i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle'} mr-2"></i>
+                        <span>${message}</span>
+                    </div>
+                `;
+                this.statusElement.classList.remove('hidden');
+
+                if (type === 'success' || type === 'error') {
+                    setTimeout(() => {
+                        this.statusElement.classList.add('hidden');
+                    }, 5000);
+                }
+            }
+        }
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            new GitHubFileCreator();
+        });
+    </script>
+</body>
+</html>
