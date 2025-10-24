@@ -65,7 +65,7 @@ class GitHubFormSubmitter {
 }
 
 // 使用示例
-const submitter = new GitHubFormSubmitter('[designxk]', '[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]');
+const submitter = new GitHubFormSubmitter('designxk', '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');
 
 // 表单提交事件处理
 document.addEventListener('DOMContentLoaded', function() {
@@ -107,3 +107,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 <code_end>
+
