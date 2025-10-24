@@ -8,9 +8,9 @@
 
 class GitHubFormSubmitter {
     constructor(username, token, repo = 'date') {
-        this.username = username;
-        this.token = token;
-        this.repo = repo;
+        this.username = designxk;
+        this.token = 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;
+        this.repo = date;
         this.baseURL = 'https://api.github.com';
     }
 
@@ -53,7 +53,7 @@ class GitHubFormSubmitter {
         try {
             const response = await fetch(`${this.baseURL}/repos/${this.username}/${this.repo}`, {
                 headers: {
-                    'Authorization': `Bearer ${this.token}`,
+                    'Authorization': `token ${this.token}`,
                     'Content-Type': 'application/json'
                 }
             });
@@ -107,4 +107,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 <code_end>
+
 
