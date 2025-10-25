@@ -21,6 +21,19 @@
         }
     </script>
     <style>
+					.contact-btn {
+			display: inline-block;
+			padding: 12px 24px;
+			background-color: #007bff;
+			color: white;
+			text-decoration: none;
+			border-radius: 4px;
+			font-size: 16px;
+			transition: background-color 0.3s;
+			}
+			.contact-btn:hover {
+			background-color: #0056b3;
+			}
         .hero-gradient {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
@@ -58,13 +71,15 @@
                     <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition">服务项目</a>
                     <a href="#experience" class="text-gray-700 hover:text-blue-600 font-medium transition">经验优势</a>
 		     <a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-medium transition">案例展示</a>
-                    <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition">联系我们</a>
-                </div>
+                         </div>
                 
                 <!-- 右侧立即咨询按钮 -->
                 <button onclick="scrollToContact()" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition font-medium">
-                    立即咨询
+					立即咨询
+					
+                    
                 </button>
+				<div class="contact-section"> <h3>联系我们</h3> <a href="tel:18570081859" class="contact-btn">立即拨号</a> </div>
             </div>
         </div>
     </nav>
@@ -487,6 +502,7 @@
 </body>
 </html>
 <code_end>
+
 
 
 
