@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小凯工业设计有限公司 - 专业的工业设计与制造解决方案</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#3b82f6'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- 左侧手机号 -->
+                <div class="flex items-center">
+                    <i class="fas fa-phone text-blue-600 mr-2"></i>
+                    <span class="text-gray-800 font-medium">18570081859</span>
+                </div>
+                
+                <!-- 中间导航菜单 -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition">首页</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition">关于我们</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition">服务项目</a>
+                    <a href="#experience" class="text-gray-700 hover:text-blue-600 font-medium transition">经验优势</a>
+                     </div>
+                
+                <!-- 右侧立即咨询按钮 -->
+                <button  class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition font-medium">
+                    <a href="tel:18570081859" class="contact-btn">立即咨询</a>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页Hero区域 -->
+    <section id="home" class="hero-gradient pt-20">
+        <div class="max-w-7xl mx-auto px-4 py-20">
+            <div class="text-center text-white fade-in">
+                <h1 class="text-5xl font-bold mb-6">小凯工业设计有限公司</h1>
+                <p class="text-xl mb-8 max-w-3xl mx-auto">
+            拥有10年电子成品开发经验，为客户提供从创意到量产的整套解决方案
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <button onclick="scrollToServices()" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                    了解我们的服务
+                </button>
+                <button onclick="scrollToContact()" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">
+                    立即咨询
+                </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">关于我们</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+            小凯工业设计有限公司专注于工业设计与制造领域，拥有经验丰富的设计团队和供应链合作伙伴。
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <img src="https://picsum.photos/600/400?random=1" alt="工业设计团队工作场景" class="rounded-lg shadow-lg">
+                </div>
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">10年专业经验</h3>
+                    <p class="text-gray-600 mb-4">
+                我们拥有10年电子成品开发经验，致力于为客户提供从产品概念设计到批量生产的完整解决方案。
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>专业的设计团队</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>完善的供应链体系</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>严格的质量控制</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>快速的交付周期</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务项目 -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">我们的服务</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 3D扫描服务 -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
+                    <div class="text-blue-600 text-center mb-4">
+                        <i class="fas fa-cube text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">3D扫描服务</h3>
+                    <p class="text-gray-600 text-center">
+                使用先进的三维精密测量设备进行形位公差检测和数据采集
+                    </p>
+                </div>
+                
+                <!-- 抄数建模 -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
+                    <div class="text-blue-600 text-center mb-4">
+                        <i class="fas fa-ruler-combined text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">抄数建模</h3>
+                    <p class="text-gray-600 text-center">
+                通过逆向造型设计将实体产品转化为精确的数字模型
+                    </p>
+                </div>
+                
+                <!-- 结构优化设计 -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
+                    <div class="text-blue-600 text-center mb-4">
+                        <i class="fas fa-cogs text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">结构优化设计</h3>
+                    <p class="text-gray-600 text-center">
+                对产品结构进行优化分析，提高产品的可靠性和性能
+                    </p>
+                </div>
+                
+                <!-- 电路板设计 -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
+                    <div class="text-blue-600 text-center mb-4">
+                        <i class="fas fa-microchip text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">电路板设计</h3>
+                    <p class="text-gray-600 text-center">
+                专业的PCB设计服务，包括原理图设计和布局优化
+                    </p>
+                </div>
+                
+                <!-- 软件开发 -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
+                    <div class="text-blue-600 text-center mb-4">
+                        <i class="fas fa-code text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">软件开发</h3>
+                    <p class="text-gray-600 text-center">
+                定制化软件开发，满足客户的特定业务需求
+                    </p>
+                </div>
+                
+                <!-- 3D打印 -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
+                    <div class="text-blue-600 text-center mb-4">
+                        <i class="fas fa-print text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">3D打印</h3>
+                    <p class="text-gray-600 text-center">
+                快速原型制作，支持多种材料打印
+                    </p>
+                </div>
+                
+                <!-- 模具开发管理 -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
+                    <div class="text-blue-600 text-center mb-4">
+                        <i class="fas fa-tools text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">模具开发管理</h3>
+                    <p class="text-gray-600 text-center">
+                专业的模具设计和制造管理服务
+                    </p>
+                </div>
+                
+                <!-- 供应链管理 -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
+                    <div class="text-blue-600 text-center mb-4">
+                        <i class="fas fa-truck text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">供应链管理</h3>
+                    <p class="text-gray-600 text-center">
+                完整的供应链解决方案，确保产品质量和交付周期
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 经验优势 -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">我们的优势</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center fade-in">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-award text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">10年经验</h3>
+                    <p class="text-gray-600">
+                拥有10年电子成品开发经验，熟悉各类产品设计制造流程
+                    </p>
+                </div>
+                
+                <div class="text-center fade-in">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-users text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">专业团队</h3>
+                    <p class="text-gray-600">
+                经验丰富的设计团队，能够应对各种复杂的设计挑战
+                    </p>
+                </div>
+                
+                <div class="text-center fade-in">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">完整解决方案</h3>
+                    <p class="text-gray-600">
+                从创意到量产的一站式服务，节省客户时间和成本
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center">
+                <p>&copy; 2025 小凯工业设计有限公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 平滑滚动函数
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+        
+        function scrollToServices() {
+            scrollToSection('services');
+        }
+        
+        function scrollToContact() {
+            scrollToSection('contact');
+        }
+        
+        // 表单提交处理
+        async function submitForm(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            
+            // 添加时间戳
+            data.timestamp = new Date().toISOString();
+            
+           
+        
+        // 添加滚动动画
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // 观察所有需要动画的元素
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
+<code_end>
