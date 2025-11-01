@@ -1,143 +1,413 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小凯工业设计有限公司 - 专业产品创新设计</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo">
-                    <h1>小凯工业设计</h1>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="active">首页</a></li>
-                    <li><a href="works.html">作品展示</a></li>
-                    <li><a href="services.html">服务项目</a></li>
-                    <li><a href="about.html">关于我们</a></li>
-                    <li><a href="contact.html">联系我们</a></li>
-                </ul>
+<!DOCTYPE html> <html lang="zh-CN"> 
+ <head> <meta charset="UTF-8">
+  <link rel="shortcut icon" href="12.ico" type="x-icon">
+  <link rel="icon" href="12.ico" type="x-icon">
+<meta name="baidu-site-verification" content="codeva-bSpdsJtui9" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>小凯工业设计有限公司 - 专业的工业设计与制造解决方案</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+ <script src="https://cdn.tailwindcss.com"></script> <script>
+tailwind.config = { theme: { extend: { colors: { primary: '#2563eb', secondary: '#1e40af', accent: '#3b82f6' } } } } </script>
+<style> .hero-gradient 
+{ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); } 
+.card-hover { transition: all 0.3s ease; } 
+.card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); } 
+.fade-in { animation: fadeIn 0.8s ease-in; } @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+ .case-hover { transition: all 0.3s ease; }
+ .case-hover:hover { transform: scale(1.05); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+ </style>
+ </head> 
+<body class="bg-gray-50">
+ <!-- 导航栏 --> <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+ <div class="max-w-7xl mx-auto px-4"> <div class="flex justify-between items-center h-16">
+ <!-- 左侧手机号 --> <div class="flex items-center"> <i class="fas fa-phone text-blue-600 mr-2"></i> <span class="text-gray-800 font-medium">18570081859</span>
+ </div>
+            <!-- 中间导航菜单 -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition">首页</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition">关于我们</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition">服务项目</a>
+                <a href="#experience" class="text-gray-700 hover:text-blue-600 font-medium transition">经验优势</a>
+                <a href="#cases" class="text-gray-700 hover:text-blue-600 font-medium transition">案例展示</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition">联系我们</a>
             </div>
-        </nav>
-    </header>
+            
+            <!-- 右侧立即咨询按钮 - 改为拨号功能 -->
+            <a href="tel:18570081859" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition font-medium">
+                立即咨询
+            </a>
+        </div>
+    </div>
+</nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h2>成为一家以市场需求为核心<br>并具有价值的产品创新设计公司</h2>
-                <p>专注于产品外观设计、结构设计与量产落地的一站式解决方案</p>
-            </div>
-        </section>
-
-        <!-- Statistics Section -->
-        <section class="stats">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <h3>50+</h3>
-                        <p>行业合作伙伴</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>8+</h3>
-                        <p>年行业专研经验</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>200+</h3>
-                        <p>产品设计成功案例</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>20+</h3>
-                        <p>核心供应链赋能团队</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Works -->
-        <section class="featured-works">
-            <div class="container">
-                <h2 class="section-title">精选作品</h2>
-                <div class="works-grid">
-                    <div class="work-item">
-                        <h4>智能家居控制器</h4>
-                        <p>现代简约风格的家居控制中心</p>
-                    </div>
-                    <div class="work-item">
-                        <h4>医疗检测设备</h4>
-                        <p>专业级医疗仪器外观与结构设计</p>
-                    </div>
-                    <div class="work-item">
-                        <h4>消费电子产品</h4>
-                        <p>时尚与功能兼备的电子设备</p>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <a href="works.html" class="btn">查看更多作品</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Preview -->
-        <section class="services-preview">
-            <div class="container">
-                <h2 class="section-title">一站式产品设计服务</h2>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <h4>外观设计</h4>
-                        <p>创新美学与用户体验的完美结合</p>
-                    </div>
-                    <div class="service-item">
-                        <h4>结构设计</h4>
-                        <p>严谨的工程设计与可靠性验证</p>
-                    </div>
-                    <div class="service-item">
-                        <h4>手板制作</h4>
-                        <p>快速原型验证与设计优化</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta">
-            <div class="container">
-                <h2>有工业设计需求，欢迎拨打咨询电话</h2>
-                <div class="contact-info">
-                    <h3>185-7008-1859</h3>
-                    <p>联系人：朱先生（商务合作）</p>
-                    <p>邮箱：xinkon@designxk.com</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>联系我们</h4>
-                    <p>电话/微信：18570081859</p>
-                    <p>邮箱：xinkon@designxk.com</p>
-                </div>
-                <div class="footer-section">
-                    <h4>公司地址</h4>
-                    <p>湖南省长沙市岳麓区雷锋大道黄金创业园A8-502</p>
-                </div>
-                <div class="footer-section">
-                    <h4>商务合作</h4>
-                    <p>邮箱：xinkon@designxk.com</p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2024 小凯工业设计有限公司 版权所有</p>
+<!-- 首页Hero区域 -->
+<section id="home" class="hero-gradient pt-20">
+    <div class="max-w-7xl mx-auto px-4 py-20">
+        <div class="text-center text-white fade-in">
+            <h1 class="text-5xl font-bold mb-6">小凯工业设计有限公司</h1>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                拥有15年电子成品开发经验，为客户提供从创意到量产的整套解决方案
+            </p>
+            <div class="flex justify-center space-x-4">
+                <button onclick="scrollToServices()" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                    了解我们的服务
+                </button>
+                <a href="tel:18570081859" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">
+                    立即咨询
+                </a>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <script src="js/main.js"></script>
-</body>
-</html>
+<!-- 关于我们 -->
+<section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">关于我们</h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                小凯工业设计有限公司专注于为企业提供新产品开发全流程解决方案，涵盖高精度3D扫描、抄数建模、结构设计优化、PCB开发、嵌入式软件开发、3D打印及样品制作。
+             依托多年合作的模具开发商与高效供应链体系，我们以技术创新与资源整合能力， 助力客户从概念到量产的高效落地，为产品开发提供一站式专业支持。
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="fade-in">
+                <img src="https://designxk.com/img/3949.jpg" "alt="工业设计团队工作场景" class="rounded-lg shadow-lg">
+            </div>
+            <div class="fade-in">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">15年专业经验</h3>
+                <p class="text-gray-600 mb-4">
+                    我们以15年电子成品开发经验为基石，为客户提供从概念设计到批量生产的全流程解决方案。
+                    专业设计团队创新引领，完善的供应链体系高效协同，严格的质量控制确保品质，快速的交付周期助力产品抢占市场。
+                 以技术沉淀与资源整合能力，为您的产品开发保驾护航。
+                </p>
+                <ul class="space-y-2 text-gray-600">
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>专业的设计团队</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>完善的供应链体系</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>严格的质量控制</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>快速的交付周期</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 服务项目 -->
+<section id="services" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">我们的服务</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- 3D扫描服务 -->
+            <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
+                <div class="text-blue-600 text-center mb-4">
+                    <i class="fas fa-cube text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">3D扫描服务</h3>
+                <p class="text-gray-600 text-center">
+                    使用先进的三维精密测量设备进行形位公差检测和数据采集
+                </p>
+            </div>
+            
+            <!-- 抄数建模 -->
+            <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
+                <div class="text-blue-600 text-center mb-4">
+                    <i class="fas fa-ruler-combined text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">抄数建模</h3>
+                <p class="text-gray-600 text-center">
+                    通过逆向造型设计将实体产品转化为精确的数字模型
+                </p>
+            </div>
+            
+            <!-- 结构优化设计 -->
+            <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
+                <div class="text-blue-600 text-center mb-4">
+                    <i class="fas fa-cogs text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">结构优化设计</h3>
+                <p class="text-gray-600 text-center">
+                    对产品结构进行优化分析，提高产品的可靠性和性能
+                </p>
+            </div>
+            
+            <!-- 电路板设计 -->
+            <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
+                <div class="text-blue-600 text-center mb-4">
+                    <i class="fas fa-microchip text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">电路板设计</h3>
+                <p class="text-gray-600 text-center">
+                    专业的PCB设计服务，包括原理图设计和布局优化
+                </p>
+            </div>
+            
+            <!-- 软件开发 -->
+            <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
+                <div class="text-blue-600 text-center mb-4">
+                    <i class="fas fa-code text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">软件开发</h3>
+                <p class="text-gray-600 text-center">
+                    定制化软件开发，满足客户的特定业务需求
+                </p>
+            </div>
+            
+            <!-- 3D打印 -->
+            <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
+                <div class="text-blue-600 text-center mb-4">
+                    <i class="fas fa-print text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">3D打印</h3>
+                <p class="text-gray-600 text-center">
+                    快速原型制作，支持多种材料打印
+                </p>
+            </div>
+            
+            <!-- 模具开发管理 -->
+            <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
+                <div class="text-blue-600 text-center mb-4">
+                    <i class="fas fa-tools text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">模具开发管理</h3>
+                <p class="text-gray-600 text-center">
+                    专业的模具设计和制造管理服务
+                </p>
+            </div>
+            
+            <!-- 供应链管理 -->
+            <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
+                <div class="text-blue-600 text-center mb-4">
+                    <i class="fas fa-truck text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">供应链管理</h3>
+                <p class="text-gray-600 text-center">
+                    完整的供应链解决方案，确保产品质量和交付周期
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 经验优势 -->
+<section id="experience" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">我们的优势</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center fade-in">
+                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-award text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">15年经验</h3>
+                <p class="text-gray-600">
+                    拥有15年电子成品开发经验，熟悉各类产品设计制造流程
+                </p>
+            </div>
+            
+            <div class="text-center fade-in">
+                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-users text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">专业团队</h3>
+                <p class="text-gray-600">
+                    经验丰富的设计团队，能够应对各种复杂的设计挑战
+                </p>
+            </div>
+            
+            <div class="text-center fade-in">
+                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">完整解决方案</h3>
+                <p class="text-gray-600">
+                    从创意到量产的一站式服务，节省客户时间和成本
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 新增案例展示栏目 -->
+<section id="cases" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">案例展示</h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                展示我们为各行业客户设计的优秀电子产品案例
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 案例1：智能家居控制器 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden case-hover fade-in">
+                <img src="https://designxk.com/img/11.jpg" alt="智能家居控制器" class="w-full object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">智能家居控制音箱</h3>
+                    <p class="text-gray-600 text-sm">
+                        融入飞碟外形元素，紧促结构设计搭载‌大尺寸喇叭+大音腔设计
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 案例2：超声医疗雾化器 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden case-hover fade-in">
+                <img src="https://designxk.com/img/12.jpg" alt="医疗雾化器" class="w-full object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">超声医疗雾化器</h3>
+                    <p class="text-gray-600 text-sm">
+                        静音，大雾量，超长续航，超声雾化，健康“雾”到
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 案例3：便携式医疗设备 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden case-hover fade-in">
+                <img src="https://designxk.com/img/13.jpg" alt="便携式医疗设备" class="w-full object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">便携式智能手表</h3>
+                    <p class="text-gray-600 text-sm">
+                        酷黑表身+透气表带，舒适又酷飒，集成多种传感器，支持远程数据传输
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 案例4：智能健康监测设备 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden case-hover fade-in">
+                <img src="https://designxk.com/img/15.jpg" alt="智能健康监测设备" class="w-full object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">智能健康监测设备</h3>
+                    <p class="text-gray-600 text-sm">
+                        人体工学曲线贴合手指，夹持无压迫感，蓝牙连接APP，24小时健康档案自动同步，趋势曲线一目了然
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 案例5：专业测量仪器 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden case-hover fade-in">
+                <img src="https://designxk.com/img/14.jpg" alt="专业测量仪器" class="w-full object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">专业激光测距仪器</h3>
+                    <p class="text-gray-600 text-sm">
+                        防滑纹理+人体工学握持，长时间握持不累手，操作更顺手
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 案例6：物联网智能售货机 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden case-hover fade-in">
+                <img src="https://designxk.com/img/16.jpg" alt="物联网智能售货机" class="w-full object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">物联网智能售货机</h3>
+                    <p class="text-gray-600 text-sm">
+                        极简立方体设计，线条利落如未来科技装置，置于商场/社区，瞬间成为视觉焦点
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 联系我们 - 已删除表单 -->
+<section id="contact" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12 fade-in">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">联系我们</h2>
+            <p class="text-gray-600 text-lg">
+                欢迎直接拨打我们的电话进行咨询
+            </p>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 fade-in">
+            <div class="text-center">
+                <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-phone text-blue-600 text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">电话咨询（微信同号）</h3>
+                <p class="text-gray-600 mb-6">
+                    请直接拨打我们的电话，我们将为您提供专业的咨询服务
+                </p>
+                <div class="flex justify-center items-center space-x-4">
+                    <i class="fas fa-phone text-blue-600"></i>
+                    <span class="text-2xl font-bold text-blue-600">18570081859(朱)</span>
+                </div>
+                <a href="tel:18570081859" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition mt-6">
+                        立即拨号咨询
+                    </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="bg-gray-800 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center">
+            <p>&copy; 2025 小凯工业设计有限公司 版权所有</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // 平滑滚动函数
+    function scrollToSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+    
+    function scrollToServices() {
+        scrollToSection('services');
+    }
+    
+    function scrollToContact() {
+        scrollToSection('contact');
+    }
+    
+    // 添加滚动动画
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+            }
+        });
+    }, observerOptions);
+    
+    // 观察所有需要动画的元素
+    document.addEventListener('DOMContentLoaded', () => {
+        const elements = document.querySelectorAll('.fade-in');
+        elements.forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
