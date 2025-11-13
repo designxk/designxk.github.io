@@ -424,79 +424,48 @@ body {
 }
 
 /* 页脚样式 */
-.footer-section {
-    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
-    color: var(--white);
-    padding: 3rem 0;
+footer {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
 }
 
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+/* 快速链接横排布局 */
+.footer-links-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
 }
 
-.footer-info h4 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-.social-links a {
-    color: #9ca3af;
-    transition: var(--transition);
-}
-
-.social-links a:hover {
-    color: var(--white);
-    transform: translateY(-1px);
-}
-
-.copyright {
-    border-top: 1px solid #374151;
-    padding-top: 2rem;
-    margin-top: 2rem;
-    text-align: center;
-}
-
-/* 响应式设计 */
+/* 响应式调整 */
 @media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
-    
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .before-after {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .service-card {
-        padding: 1.5rem;
-    }
-    
-    .contact-info, .contact-form {
-        padding: 1.5rem;
-    }
+  .footer-links-horizontal {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  footer .container > div {
+    margin-bottom: 2rem;
+  }
 }
+
+/* 图标悬停动画 */
+footer i {
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  transform: translateY(-1px);
+}
+
+/* 移动端适配 */
+@media (max-width: 640px) {
+  .footer-links-horizontal {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+
 
 @media (max-width: 480px) {
     .nav-container {
@@ -545,3 +514,4 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
