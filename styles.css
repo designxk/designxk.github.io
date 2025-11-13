@@ -41,9 +41,44 @@
     animation: fadeInUp 0.6s ease forwards;
 }
 
-/* ��Ӧʽ���� */
+/* ÏìÓ¦Ê½µ÷Õû */
 @media (max-width: 768px) {
     .process-step {
         padding-left: 2rem;
     }
 }
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 面包屑导航 */
+.breadcrumb {
+    padding: 15px 0;
+    font-size: 14px;
+}
+.breadcrumb a {
+    color: #666;
+    text-decoration: none;
+}
+.breadcrumb a:hover {
+    color: #333;
+}
+
+/* 服务卡片悬停效果 */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
