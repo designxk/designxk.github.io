@@ -1,48 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小凯产品设计 - 专业3D抄数扫描逆向建模与3D打印服务商</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-	<meta name="description" content="提供高精度三维扫描 模型抄数 逆向工程 产品设计 3D打印 小批量生产一站式服务 ">
-
+    <title>小凯产品设计 - 专业3D扫描抄数 3D打印服务 三维建模设计</title>
+    <meta name="description" content="小凯产品设计有限公司提供高精度3D扫描抄数、3D打印服务、三维建模设计，精度可达0.02mm，10年产品开发经验，一站式解决方案">
+    <meta name="keywords" content="3D扫描,3D打印,三维建模,抄数,长沙3D打印,产品设计">
 </head>
 <body class="bg-gray-50">
     <!-- 导航栏 -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
-                    <i class="fas fa-cube text-blue-600 text-2xl mr-3"></i>
-                    <span class="text-xl font-bold text-gray-800">小凯产品设计</span>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-blue-600 font-semibold">首页</a>
-                    <a href="#services" class="text-gray-600 hover:text-blue-600 transition">服务项目</a>
-                    <a href="#cases" class="text-gray-600 hover:text-blue-600 transition">成功案例</a>
-                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition">关于我们</a>
-                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">联系我们</a>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-600">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- 移动端菜单 -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pb-4">
-            <a href="#home" class="block py-2 text-gray-600 hover:text-blue-600">首页</a>
-            <a href="#services" class="block py-2 text-gray-600 hover:text-blue-600">服务项目</a>
-            <a href="#cases" class="block py-2 text-gray-600 hover:text-blue-600">成功案例</a>
-            <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600">关于我们</a>
-            <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600">联系我们</a>
-        </div>
-    </nav>
+			<nav class="main-nav">
+			<div class="nav-container">
+				<div class="logo">
+					<h1>小凯产品设计</h1>
+				</div>
+				<ul class="nav-menu">
+					<li><a href="#home">首页</a></li>
+					<li><a href="#services">服务项目</a></li>
+					<li><a href="#cases">案例展示</a></li>
+					<li><a href="#about">关于我们</a></li>
+					<li><a href="#contact">联系我们</a></li>
+				</ul>
+				<div class="contact-btn">
+					<a href="tel:18570081859" class="btn-primary">立即咨询</a>
+				</div>
+			</div>
+			</nav>
 
     <!-- 主页横幅 -->
     <section id="home" class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
@@ -60,139 +43,184 @@
     </section>
 
     <!-- 服务项目 -->
-    <section id="services" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">核心服务项目</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- 服务项1 -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition">
-                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fas fa-ruler-combined text-blue-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">3D扫描抄数</h3>
-                    <p class="text-gray-600 mb-4">高精度三维数据采集，精度可达0.02mm，支持复杂曲面和内部结构</p>
-                </div>
-                
-                <!-- 服务项2 -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition">
-                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fas fa-cube text-green-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">3D打印服务</h3>
-                    <p class="text-gray-600 mb-4">多材料快速成型，最大打印尺寸500×500×500mm</p>
-                </div>
-
-                <!-- 服务项3 -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition">
-                    <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fas fa-pencil-ruler text-purple-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">三维建模设计</h3>
-                    <p class="text-gray-600 mb-4">专业CAD建模，参数化设计，结构优化分析</p>
-                </div>
-            </div>
-        </div>
-    </section>
+				<section id="services" class="services-section">
+				<div class="container">
+					<h2 class="section-title">核心服务项目</h2>
+					<div class="services-grid">
+						<div class="service-card">
+							<div class="service-icon">3D</div>
+							<h3>3D扫描抄数</h3>
+							<p>高精度三维数据采集，精度可达0.02mm，支持复杂曲面和内部结构</p>
+							<ul class="feature-list">
+								<li>精度：0.02mm</li>
+								<li>支持复杂曲面</li>
+								<li>内部结构扫描</li>
+							</ul>
+						</div>
+						
+						<div class="service-card">
+							<div class="service-icon">打印</div>
+							<h3>3D打印服务</h3>
+							<p>多材料快速成型，最大打印尺寸500×500×500mm</p>
+							<ul class="feature-list">
+								<li>最大尺寸：500×500×500mm</li>
+								<li>多材料选择</li>
+								<li>快速成型</li>
+							</ul>
+						</div>
+						
+						<div class="service-card">
+							<div class="service-icon">建模</div>
+							<h3>三维建模设计</h3>
+							<p>专业CAD建模，参数化设计，结构优化分析</p>
+							<ul class="feature-list">
+								<li>专业CAD建模</li>
+								<li>参数化设计</li>
+								<li>结构优化分析</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
 
     <!-- 成功案例 -->
-    <section id="cases" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">案例展示</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- 案例1 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
-                <img src="https://designxk.com/img/a1.jpg" alt="工业零件逆向设计案例" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <span class="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">
-                    工业
-                    </span>
-                    <h3 class="text-xl font-semibold text-gray-800 mt-3 mb-2">工业零件逆向设计</h3>
-                    <p class="text-gray-600">高精度扫描+参数化建模，为制造企业恢复停产零件图纸</p>
-                </div>
-                </div>
-                
-                <!-- 案例2 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
-                <img src="https://designxk.com/img/a3.jpg" alt="文物数字化保护案例" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <span class="inline-block px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm font-medium">
-                    文化
-                    </span>
-                    <h3 class="text-xl font-semibold text-gray-800 mt-3 mb-2">文物数字化保护</h3>
-                    <p class="text-gray-600">无损扫描+三维重建，为博物馆建立数字档案</p>
-                </div>
-                </div>
-
-                <!-- 案例3 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
-                <img src="https://designxk.com/img/a2.jpg" alt="定制手办制作案例" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <span class="inline-block px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm font-medium">
-                    文创
-                    </span>
-                    <h3 class="text-xl font-semibold text-gray-800 mt-3 mb-2">定制手办制作</h3>
-                    <p class="text-gray-600">从设计到成品一站式服务，精度达0.05mm</p>
-                </div>
-                </div>
-            </div>
-        </div>
-    </section>
+			<section id="cases" class="cases-section">
+			<div class="container">
+				<h2 class="section-title">成功案例展示</h2>
+				<div class="cases-tabs">
+					<div class="tab-header">
+						<button class="tab-btn active" data-tab="industrial">工业案例</button>
+						<button class="tab-btn" data-tab="cultural">文化案例</button>
+						<button class="tab-btn" data-tab="creative">文创案例</button>
+					</div>
+					
+					<div class="tab-content">
+						<div class="tab-pane active" id="industrial">
+							<div class="case-detail">
+								<h3>工业零件逆向设计</h3>
+								<p>高精度扫描+参数化建模，为制造企业恢复停产零件图纸</p>
+								<div class="before-after">
+									<div class="before">
+										<img src="images/part-before.jpg" alt="零件扫描前">
+										<span>扫描前</span>
+									</div>
+									<div class="after">
+										<img src="images/part-after.jpg" alt="零件建模后">
+										<span>建模后</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="tab-pane" id="cultural">
+							<div class="case-detail">
+								<h3>文物数字化保护</h3>
+								<p>无损扫描+三维重建，为博物馆建立数字档案</p>
+							</div>
+						</div>
+						
+						<div class="tab-pane" id="creative">
+							<div class="case-detail">
+								<h3>定制手办制作</h3>
+								<p>从设计到成品一站式服务，精度达0.05mm</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
     <!-- 关于我们 -->
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">关于我们</h2>
-            <div class="max-w-4xl mx-auto text-center">
-                <p class="text-gray-600 text-lg mb-8"> 小凯产品设计有限公司拥有10年产品开发经验，专注于为企业提供新产品开发全流程解决方案，涵盖高精度3D扫描、抄数建模、结构设计优化、嵌入式软件开发、3D打印及样品制作。
-             依托精密的3D扫描仪器与经验丰富的技术团队，借以技术创新与资源整合能力， 助力客户从概念到量产的高效落地，为产品开发提供一站式专业支持。</p>
-                <div class="grid md:grid-cols-3 gap-8 mt-12">
-                <!-- 图片4 -->
-                <div class="bg-gray-50 rounded-xl p-6">
-                <img src="https://designxk.com/img/b1.jpg" alt="公司设备展示" class="w-full h-40 object-cover rounded-lg mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-3">先进扫描设备</h3>
-                <p class="text-gray-600">采用高精度激光扫描仪，确保数据采集精准可靠</p>
-                </div>
-                
-                <!-- 图片5 -->
-                <div class="bg-gray-50 rounded-xl p-6">
-                <img src="https://designxk.com/img/b2.jpg" alt="专业技术团队" class="w-full h-40 object-cover rounded-lg mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-3">专业团队</h3>
-                <p class="text-gray-600">经验丰富的工程师团队，提供专业的技术支持和服务</p>
-                </div>
-
-                <!-- 图片6 -->
-                <div class="bg-gray-50 rounded-xl p-6">
-                <img src="https://designxk.com/img/b3.jpg" alt="质量保证体系" class="w-full h-40 object-cover rounded-lg mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-3">质量保证</h3>
-                <p class="text-gray-600">严格的质量控制流程，确保每个项目都达到客户要求</p>
-                </div>
-                </div>
-            </div>
-        </div>
-    </section>
+			<section id="about" class="about-section">
+			<div class="container">
+				<h2 class="section-title">关于我们</h2>
+				<div class="about-content">
+					<p>小凯产品设计有限公司拥有10年产品开发经验，专注于为企业提供新产品开发全流程解决方案，涵盖高精度3D扫描、抄数建模、结构设计优化、嵌入式软件开发、3D打印及样品制作。</p>
+					
+					<div class="advantages-grid">
+						<div class="advantage-item">
+							<h4>先进扫描设备</h4>
+							<p>采用高精度激光扫描仪，确保数据采集精准可靠</p>
+						</div>
+						<div class="advantage-item">
+							<h4>专业团队</h4>
+							<p>经验丰富的工程师团队，提供专业的技术支持和服务</p>
+						</div>
+						<div class="advantage-item">
+							<h4>质量保证</h4>
+							<p>严格的质量控制流程，确保每个项目都达到客户要求</p>
+						</div>
+					</div>
+					
+					<div class="certificates">
+						<h4>资质证书</h4>
+						<div class="cert-grid">
+							<img src="images/cert1.jpg" alt="ISO认证">
+							<img src="images/cert2.jpg" alt="技术专利">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
     <!-- 联系我们 -->
-    <section id="contact" class="py-16 bg-gradient-to-br from-blue-500 to-blue-700 text-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">联系我们</h2>
-            <div class="max-w-4xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-2xl font-semibold mb-6">小凯产品设计有限公司</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-phone w-6 mr-4"></i>
-                            <span>电话：18570081859(朱)</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-map-marker-alt w-6 mr-4"></i>
-                            <span>地址：长沙市岳麓区汇智路金荣同心工业园A5栋405</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+		<section id="contact" class="contact-section">
+			<div class="container">
+				<h2 class="section-title">联系我们</h2>
+				<div class="contact-grid">
+					<div class="contact-info">
+						<div class="contact-item">
+							<strong>电话：</strong>
+							<a href="tel:18570081859">18570081859（朱）</a>
+						</div>
+						<div class="contact-item">
+							<strong>地址：</strong>
+							<span>长沙市岳麓区汇智路金荣同心工业园A5栋405</span>
+						</div>
+					</div>
+					
+					<div class="contact-form">
+						<h3>快速获取报价</h3>
+						<form id="quote-form">
+							<div class="form-group">
+								<input type="text" placeholder="您的姓名" required>
+							</div>
+							<div class="form-group">
+								<input type="tel" placeholder="联系电话" required>
+							</div>
+							<div class="form-group">
+								<select required>
+									<option value="">选择服务类型</option>
+									<option value="scanning">3D扫描抄数</option>
+									<option value="printing">3D打印服务</option>
+									<option value="modeling">三维建模设计</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<textarea placeholder="项目需求描述" rows="4"></textarea>
+							</div>
+							<button type="submit" class="btn-submit">提交需求</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 结构化数据标记 -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "LocalBusiness",
+		  "name": "小凯产品设计有限公司",
+		  "telephone": "18570081859",
+		  "address": {
+			"@type": "PostalAddress",
+			"streetAddress": "长沙市岳麓区汇智路金荣同心工业园A5栋405"
+		  },
+		  "description": "专业3D扫描抄数、3D打印服务、三维建模设计，10年产品开发经验",
+		  "areaServed": "长沙"
+		}
+		</script>
 
     <!-- 页脚 -->
     <footer class="bg-gray-800 text-white py-8">
@@ -204,12 +232,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
