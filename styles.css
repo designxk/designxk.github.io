@@ -514,4 +514,20 @@ footer a:hover {
     opacity: 1;
     transform: translateY(0);
 }
+.advantage-card {
+  transition: all 0.3s ease;
+}
+
+.advantage-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 图片样式确保响应式 */
+.advantage-card img {
+  transition: transform 0.3s ease;
+}
+
+.advantage-card:hover img {
+  transform: scale(1.03);
+}
 
