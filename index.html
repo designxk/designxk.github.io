@@ -363,10 +363,41 @@
             }
         });
     });
+
+    // 筛选功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 移除所有按钮的active类
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // 为当前点击的按钮添加active类
+                    this.classList.add('active');
+                    
+                    // 这里可以添加实际的筛选逻辑
+                    const filterType = this.textContent;
+                    console.log('筛选类型:', filterType);
+                });
+            });
+            
+            // 卡片悬停效果
+            const caseCards = document.querySelectorAll('.case-card');
+            caseCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
+                });
+            });
+        });
 </script>
 </body>
 
 </html>
+
 
 
 
