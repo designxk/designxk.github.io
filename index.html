@@ -145,24 +145,120 @@
 
 <!-- 案例展示 -->
 <section id="cases" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 gradient-text">案例展示</h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white rounded-2xl shadow-lg p-8">
-        <h3 class="text-xl font-semibold mb-4">文物数字化保护</h3>
-        <p class="text-gray-600 mb-6">无损扫描+三维重建，为博物馆建立数字档案</p>
-        <img src="https://picsum.photos/300/200" alt="文物三维数字化模型展示" class="w-full rounded-lg shadow-md">
-    </div>
-        
-     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white rounded-2xl shadow-lg p-8">
-        <h3 class="text-xl font-semibold mb-4">文物数字化保护2</h3>
-        <p class="text-gray-600 mb-6">无损扫描+三维重建，为博物馆建立数字档案</p>
-        <img src="https://picsum.photos/300/200" alt="文物三维数字化模型展示" class="w-full rounded-lg shadow-md">
-    </div>
-     
-</div>
+  <!-- 案例展示区域 -->
+    <section id="cases" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 gradient-text">案例展示</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                探索我们在各个领域的创新数字化解决方案，见证技术如何改变传统行业
+            </p>
+            
+            <!-- 筛选按钮 -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active px-6 py-2 rounded-full bg-white shadow-md transition-all">全部案例</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-white shadow-md transition-all">文物数字化</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-white shadow-md transition-all">建筑设计</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-white shadow-md transition-all">工业制造</button>
+            </div>
+            
+            <!-- 案例网格 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 案例1 -->
+                <div class="case-card bg-white rounded-2xl shadow-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-monument text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">文物数字化保护</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">采用高精度三维扫描技术，为珍贵文物建立永久数字档案，支持虚拟展示与研究分析。</p>
+                    <img src="https://picsum.photos/600/400?random=1" alt="古代青铜器三维数字化模型展示" class="w-full rounded-lg shadow-md mb-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500"><i class="fas fa-calendar mr-2"></i>2024年完成</span>
+                        <button class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">查看详情</button>
+                    </div>
+                </div>
+                
+                <!-- 案例2 -->
+                <div class="case-card bg-white rounded-2xl shadow-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-building text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">历史建筑修复</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">通过激光扫描与BIM技术结合，为历史建筑提供精准修复方案与数字化管理。</p>
+                    <img src="https://picsum.photos/600/400?random=2" alt="历史建筑三维扫描点云数据展示" class="w-full rounded-lg shadow-md mb-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500"><i class="fas fa-calendar mr-2"></i>2024年完成</span>
+                        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">查看详情</button>
+                    </div>
+                </div>
+                
+                <!-- 案例3 -->
+                <div class="case-card bg-white rounded-2xl shadow-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-industry text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">智能制造优化</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">运用数字孪生技术优化生产流程，实现设备预测性维护与生产效率提升。</p>
+                    <img src="https://picsum.photos/600/400?random=3" alt="智能工厂数字孪生系统界面" class="w-full rounded-lg shadow-md mb-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500"><i class="fas fa-calendar mr-2"></i>2023年完成</span>
+                        <button class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">查看详情</button>
+                    </div>
+                </div>
+                
+                <!-- 案例4 -->
+                <div class="case-card bg-white rounded-2xl shadow-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-city text-orange-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">智慧城市规划</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">基于GIS与大数据分析，为城市发展提供科学决策支持与可视化规划方案。</p>
+                    <img src="https://picsum.photos/600/400?random=4" alt="智慧城市三维规划模型可视化" class="w-full rounded-lg shadow-md mb-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500"><i class="fas fa-calendar mr-2"></i>2024年完成</span>
+                        <button class="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors">查看详情</button>
+                    </div>
+                </div>
+                
+                <!-- 案例5 -->
+                <div class="case-card bg-white rounded-2xl shadow-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-heartbeat text-red-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">医疗设备仿真</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">开发高精度医疗设备数字模型，支持手术模拟与设备性能优化测试。</p>
+                    <img src="https://picsum.photos/600/400?random=5" alt="医疗设备三维仿真模型操作界面" class="w-full rounded-lg shadow-md mb-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500"><i class="fas fa-calendar mr-2"></i>2023年完成</span>
+                        <button class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">查看详情</button>
+                    </div>
+                </div>
+                
+                <!-- 案例6 -->
+                <div class="case-card bg-white rounded-2xl shadow-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-gem text-indigo-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">珠宝定制设计</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">利用3D建模与渲染技术，为客户提供个性化珠宝设计预览与定制服务。</p>
+                    <img src="https://picsum.photos/600/400?random=6" alt="珠宝三维设计模型渲染效果展示" class="w-full rounded-lg shadow-md mb-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500"><i class="fas fa-calendar mr-2"></i>2024年完成</span>
+                        <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">查看详情</button>
+                    </div>
+                </div>
+            </div>
 
     
 </section>
@@ -271,6 +367,7 @@
 </body>
 
 </html>
+
 
 
 
