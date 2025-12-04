@@ -1,412 +1,189 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小凯产品设计 - 专业3D扫描抄数 3D打印服务 三维建模设计</title>
+    <title>长沙小凯产品抄数设计 - 专业3D数字化解决方案</title>
     <meta name="description" content="小凯产品设计有限公司提供高精度3D扫描抄数、3D打印服务、三维建模设计，精度可达0.02mm，10年产品开发经验，一站式解决方案">
     <meta name="keywords" content="3D扫描,3D打印,三维建模,抄数,长沙3D打印,产品设计">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .gradient-text {
+        .hero-gradient {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
         .service-card {
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .service-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .phone-pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
-<body class="bg-gray-50 font-sans">
-    <!-- 导航栏 -->
-    <nav class="bg-white shadow-lg fixed w-full z-50">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <div class="logo">
-                    <h1 class="text-2xl font-bold gradient-text">小凯产品设计</h1>
+<body class="bg-gray-50">
+    <!-- 头部导航 -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <i class="fas fa-cube text-2xl text-blue-600 mr-3"></i>
+                    <h1 class="text-xl font-bold text-gray-800">鑫科三维数字化</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="tel:18570081859" class="phone-pulse bg-green-500 text-white px-4 py-2 rounded-full flex items-center space-x-2 hover:bg-green-600 transition-colors">
+                        <i class="fas fa-phone"></i>
+                        <span>立即咨询</span>
+                    </a>
+                </div>
             </div>
-            <ul class="hidden md:flex space-x-8">
-                <li><a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors">首页</a></li>
-                <li><a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors">服务项目</a></li>
-                <li><a href="#cases" class="text-gray-700 hover:text-blue-600 transition-colors">案例展示</a></li>
-                <li><a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors">关于我们</a></li>
-            </ul>
-            <div class="contact-btn">
-                <a href="tel:18570081859" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all">
-                    <i class="fas fa-phone mr-2"></i>立即咨询
+        </nav>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">专业三维数字化解决方案</h2>
+            <p class="text-xl mb-8 opacity-90">3D抄数 · 逆向建模 · 3D打印 · 三维数字化</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#services" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                    了解服务
+                </a>
+                <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                    联系我们
                 </a>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <!-- 主横幅 -->
-    <section id="home" class="pt-32 pb-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">专业3D技术解决方案</h1>
-            <p class="text-xl md:text-2xl mb-8">10年产品开发经验 · 精度0.02mm · 一站式服务</p>
-            <div class="flex justify-center space-x-12 mt-12">
-                <div class="text-center">
-                    <div class="text-3xl font-bold">1000+</div>
-            <div class="text-lg">成功案例</div>
-        </div>
-        <div class="text-center">
-            <div class="text-3xl font-bold">10</div>
-            <div class="text-lg">年经验</div>
-        </div>
-        <div class="text-center">
-            <div class="text-3xl font-bold">0.02</div>
-            <div class="text-lg">mm精度</div>
-    </div>
-</section>
+    <!-- 服务介绍 -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">我们的专业服务</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- 服务1：3D抄数 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+                    <div class="text-center">
+                        <img src="https://picsum.photos/300/200?random=1" alt="3D抄数技术展示" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <i class="fas fa-ruler-combined text-3xl text-blue-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">3D抄数服务</h3>
+                        <p class="text-gray-600">采用先进三维扫描技术，精确获取物体表面数据，实现高精度三维模型重建。</p>
+                    </div>
+                </div>
 
-<!-- 服务项目 -->
-<section id="services" class="py-20 bg-white">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 gradient-text">核心服务项目</h2>
-        <p class="text-gray-600 text-center mb-16">专业团队 · 先进设备 · 质量保证</p>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- 3D扫描服务 -->
-            <div class="service-card bg-gray-50 rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all border border-gray-100">
-            <div class="service-icon w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white mb-6">
-                <i class="fas fa-cube text-xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-4">3D扫描抄数</h3>
-            <p class="text-gray-600 mb-6">高精度三维数据采集，精度可达0.02mm，支持复杂曲面和内部结构</p>
-            <ul class="space-y-3 mb-8">
-                <li class="flex items-center text-gray-700">
-                    <i class="fas fa-check text-blue-600 mr-3"></i>精度：0.02mm
-                </li>
-                <li class="flex items-center text-gray-700">
-                    <i class="fas fa-check text-blue-600 mr-3"></i>支持复杂曲面
-                </li>
-                <li class="flex items-center text-gray-700">
-                    <i class="fas fa-check text-blue-600 mr-3"></i>内部结构扫描
-                </li>
-                <li class="flex items-center text-gray-700">
-                    <i class="fas fa-check text-blue-600 mr-3"></i>快速数据采集
-                </li>
-            </ul>
-        </div>
-        
-        <!-- 3D打印服务 -->
-        <div class="service-card bg-gray-50 rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all border border-gray-100">
-            <div class="service-icon w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white mb-6">
-                <i class="fas fa-print text-xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-4">3D打印服务</h3>
-            <p class="text-gray-600 mb-6">多材料快速成型，最大打印尺寸500×500×500mm</p>
-            <ul class="space-y-3 mb-8">
-                <li class="flex items-center text-gray-700">
-                    <i class="fas fa-check text-blue-600 mr-3"></i>最大尺寸：500×500×500mm
-                </li>
-                <li class="flex items-center text-gray-700">
-                    <i class="fas fa-check text-blue-600 mr-3"></i>多材料选择
-                </li>
-                <li class="flex items-center text-gray-700">
-                    <i class="fas fa-check text-blue-600 mr-3"></i>快速成型
-                </li>
-                <li class="flex items-center text-gray-700">
-                    <i class="fas fa-check text-blue-600 mr-3"></i>表面处理
-                </li>
-            </ul>
-        </div>
-        
-        <!-- 三维建模服务 -->
-        <div class="service-card bg-gray-50 rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all border border-gray-100">
-            <div class="service-icon w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white mb-6">
-                <i class="fas fa-drafting-compass text-xl"></i>
-        </div>
-        <h3 class="text-xl font-semibold mb-4">三维建模设计</h3>
-        <p class="text-gray-600 mb-6">专业CAD建模，参数化设计，结构优化分析</p>
-        <ul class="space-y-3 mb-8">
-            <li class="flex items-center text-gray-700">
-                <i class="fas fa-check text-blue-600 mr-3"></i>专业CAD建模
-            </li>
-            <li class="flex items-center text-gray-700">
-                <i class="fas fa-check text-blue-600 mr-3"></i>参数化设计
-            </li>
-            <li class="flex items-center text-gray-700">
-                <i class="fas fa-check text-blue-600 mr-3"></i>结构优化分析
-            </li>
-            <li class="flex items-center text-gray-700">
-                <i class="fas fa-check text-blue-600 mr-3"></i>逆向工程设计
-            </li>
-        </ul>
-    </div>
-</div>
-</div>
-</section>
+                <!-- 服务2：逆向建模 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+                    <div class="text-center">
+                        <img src="https://picsum.photos/300/200?random=2" alt="逆向建模过程展示" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <i class="fas fa-sync-alt text-3xl text-green-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">逆向建模</h3>
+                        <p class="text-gray-600">基于实物样品数据，逆向还原产品三维模型，支持设计优化和改进。</p>
+                    </div>
+                </div>
 
-<!-- 案例展示 -->
-<section id="cases" class="py-20 bg-gray-50">
-  <!-- 案例展示区域 -->
-    <section id="cases" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 gradient-text">案例展示</h2>
-            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-                探索我们在各个领域的创新数字化解决方案，见证技术如何改变传统行业
-            </p>
-            
-            <!-- 筛选按钮 -->
-            <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <button class="filter-btn active px-6 py-2 rounded-full bg-white shadow-md transition-all">全部案例</button>
-                <button class="filter-btn px-6 py-2 rounded-full bg-white shadow-md transition-all">文物数字化</button>
-                <button class="filter-btn px-6 py-2 rounded-full bg-white shadow-md transition-all">建筑设计</button>
-                <button class="filter-btn px-6 py-2 rounded-full bg-white shadow-md transition-all">工业制造</button>
-            </div>
-            
-            <!-- 案例网格 -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- 案例1 -->
-                <div class="case-card bg-white rounded-2xl shadow-lg p-8">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-monument text-purple-600 text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold">文物数字化保护</h3>
-                    </div>
-                    <p class="text-gray-600 mb-6">采用高精度三维扫描技术，为珍贵文物建立永久数字档案，支持虚拟展示与研究分析。</p>
-                    <img src="https://picsum.photos/600/400?random=1" alt="古代青铜器三维数字化模型展示" class="w-full rounded-lg shadow-md mb-4">
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500"><i class="fas fa-calendar mr-2"></i>2024年完成</span>
-                        <button class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">查看详情</button>
+                <!-- 服务3：3D打印 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+                    <div class="text-center">
+                        <img src="https://picsum.photos/300/200?random=3" alt="3D打印成品展示" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <i class="fas fa-print text-3xl text-purple-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">3D打印制造</h3>
+                        <p class="text-gray-600">提供多种材料3D打印服务，快速原型制作和小批量生产解决方案。</p>
                     </div>
                 </div>
-                
-                <!-- 案例2 -->
-                <div class="case-card bg-white rounded-2xl shadow-lg p-8">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-building text-blue-600 text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold">历史建筑修复</h3>
-                    </div>
-                    <p class="text-gray-600 mb-6">通过激光扫描与BIM技术结合，为历史建筑提供精准修复方案与数字化管理。</p>
-                    <img src="https://picsum.photos/600/400?random=2" alt="历史建筑三维扫描点云数据展示" class="w-full rounded-lg shadow-md mb-4">
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500"><i class="fas fa-calendar mr-2"></i>2024年完成</span>
-                        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">查看详情</button>
-                    </div>
-                </div>
-                
-                <!-- 案例3 -->
-                <div class="case-card bg-white rounded-2xl shadow-lg p-8">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-industry text-green-600 text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold">智能制造优化</h3>
-                    </div>
-                    <p class="text-gray-600 mb-6">运用数字孪生技术优化生产流程，实现设备预测性维护与生产效率提升。</p>
-                    <img src="https://picsum.photos/600/400?random=3" alt="智能工厂数字孪生系统界面" class="w-full rounded-lg shadow-md mb-4">
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500"><i class="fas fa-calendar mr-2"></i>2023年完成</span>
-                        <button class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">查看详情</button>
-                    </div>
-                </div>
-                
-                <!-- 案例4 -->
-                <div class="case-card bg-white rounded-2xl shadow-lg p-8">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-city text-orange-600 text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold">智慧城市规划</h3>
-                    </div>
-                    <p class="text-gray-600 mb-6">基于GIS与大数据分析，为城市发展提供科学决策支持与可视化规划方案。</p>
-                    <img src="https://picsum.photos/600/400?random=4" alt="智慧城市三维规划模型可视化" class="w-full rounded-lg shadow-md mb-4">
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500"><i class="fas fa-calendar mr-2"></i>2024年完成</span>
-                        <button class="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors">查看详情</button>
-                    </div>
-                </div>
-                
-                <!-- 案例5 -->
-                <div class="case-card bg-white rounded-2xl shadow-lg p-8">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-heartbeat text-red-600 text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold">医疗设备仿真</h3>
-                    </div>
-                    <p class="text-gray-600 mb-6">开发高精度医疗设备数字模型，支持手术模拟与设备性能优化测试。</p>
-                    <img src="https://picsum.photos/600/400?random=5" alt="医疗设备三维仿真模型操作界面" class="w-full rounded-lg shadow-md mb-4">
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500"><i class="fas fa-calendar mr-2"></i>2023年完成</span>
-                        <button class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">查看详情</button>
-                    </div>
-                </div>
-                
-                <!-- 案例6 -->
-                <div class="case-card bg-white rounded-2xl shadow-lg p-8">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-gem text-indigo-600 text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold">珠宝定制设计</h3>
-                    </div>
-                    <p class="text-gray-600 mb-6">利用3D建模与渲染技术，为客户提供个性化珠宝设计预览与定制服务。</p>
-                    <img src="https://picsum.photos/600/400?random=6" alt="珠宝三维设计模型渲染效果展示" class="w-full rounded-lg shadow-md mb-4">
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500"><i class="fas fa-calendar mr-2"></i>2024年完成</span>
-                        <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">查看详情</button>
+
+                <!-- 服务4：三维数字化 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+                    <div class="text-center">
+                        <img src="https://picsum.photos/300/200?random=4" alt="三维数字化应用场景" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <i class="fas fa-digital-tachograph text-3xl text-orange-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">三维数字化</h3>
+                        <p class="text-gray-600">完整的三维数字化流程服务，从数据采集到最终应用的全方位解决方案。</p>
                     </div>
                 </div>
             </div>
-
-    
-</section>
-
-<!-- 关于我们 -->
-<section id="about" class="py-20 bg-white">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 gradient-text">关于我们</h2>
-    
-    <div class="max-w-4xl mx-auto">
-        <p class="text-gray-600 text-lg mb-12">小凯产品设计有限公司拥有10年产品开发经验，专注于为企业提供新产品开发全流程解决方案，涵盖高精度3D扫描、抄数建模、结构设计优化、嵌入式软件开发、3D打印及样品制作。</p>
-        
-     <div class="py-16 bg-white">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">我们的优势</h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- 先进扫描设备 -->
-      <div class="text-center p-6 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
-        <div class="mb-4 flex justify-center">
-          <img src="https://designxk.com/img/b1.jpg" alt="先进扫描设备" class="w-full h-48 object-cover rounded-lg">
-          <!-- 图片尺寸建议300*200，这里使用h-48(12rem≈192px)接近200px，可根据需要调整 -->
         </div>
-        <h3 class="text-xl font-semibold mb-2 text-gray-800">先进扫描设备</h3>
-        <p class="text-gray-600">采用业界领先的3D扫描技术，精度达到0.01mm，确保数据精准无误</p>
-      </div>
-        <!-- 专业团队 -->
-  <div class="text-center p-6 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
-    <div class="mb-4 flex justify-center">
-      <img src="https://designxk.com/img/b2.jpg" alt="专业团队" class="w-full h-48 object-cover rounded-lg">
-    </div>
-    <h3 class="text-xl font-semibold mb-2 text-gray-800">专业团队</h3>
-    <p class="text-gray-600">资深工程师团队，平均从业经验超过5年，提供专业解决方案</p>
-  </div>
-  
-  <!-- 质量保证 -->
-  <div class="text-center p-6 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
-    <div class="mb-4 flex justify-center">
-      <img src="https://designxk.com/img/b3.jpg" alt="质量保证" class="w-full h-48 object-cover rounded-lg">
-    </div>
-    <h3 class="text-xl font-semibold mb-2 text-gray-800">质量保证</h3>
-    <p class="text-gray-600">严格的质量控制流程，确保每个项目都达到行业最高标准</p>
-  </div>
-</div>
-</div>
-</section>
+    </section>
 
-<footer class="bg-gray-800 text-white py-12">
-  <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-    <!-- 公司信息 -->
-    <div class="lg:col-span-2">
-      <h4 class="text-xl font-semibold mb-4">小凯产品设计有限公司</h4>
-      <p class="text-gray-400 mb-4">专业3D扫描抄数 · 3D打印服务 · 三维建模设计</p>
-      <div class="flex space-x-4">
-        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-        <i class="fab fa-weixin text-2xl"></i>
-      </a>
-      <a href="#" class="text-gray-400 hover:text-white transition-colors">
-        <i class="fab fa-qq text-2xl"></i>
-    </a>
-    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-        <i class="fab fa-weibo text-2xl"></i>
-  </a>
-</div>
-</div>
+    <!-- 联系信息 -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">联系我们</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-user text-blue-500"></i>
+                            <div>
+                                <p class="font-semibold">联系人</p>
+                                <p class="text-gray-600">朱先生</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-green-500"></i>
+                            <div>
+                                <p class="font-semibold">联系电话</p>
+                                <p class="text-gray-600">18570081859</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-red-500"></i>
+                            <div>
+                                <p class="font-semibold">邮箱地址</p>
+                                <p class="text-gray-600">xinkon@designxk.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">公司地址</p>
+                                <p class="text-gray-600">湖南长沙市望城区黄金创业园C2栋503</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="tel:18570081859" class="inline-flex items-center space-x-2 bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors">
+                        <i class="fas fa-phone"></i>
+                        <span>立即致电咨询</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- 联系方式 -->
-<div class="space-y-4">
-  <div class="flex items-center">
-    <i class="fas fa-phone text-blue-400 mr-3"></i>
-    <span class="text-gray-300">电话：</span>
-    <a href="tel:18570081859" class="text-white hover:text-blue-300 transition-colors">18570081859（朱）</a>
-</div>
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 小凯产品设计三维数字化解决方案. 保留所有权利.</p>
+        </div>
+    </footer>
 
-<div class="flex items-center">
-  <i class="fas fa-envelope text-blue-400 mr-3"></i>
-  <span class="text-gray-300">邮箱：</span>
-  <a href="mailto:xinkon@designxk.com" class="text-white hover:text-blue-300 transition-colors">xinkon@designxk.com</a>
-</div>
-
-<div class="flex items-start">
-  <i class="fas fa-map-marker-alt text-blue-400 mr-3 mt-1"></i>
-  <div>
-    <span class="text-gray-300">地址：</span>
-  <span class="text-white">长沙市岳麓区汇智路金荣同心工业园A5栋405</span>
-</div>
-</div>
-</footer>
-
-<script>
-    // 平滑滚动
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-
-    // 筛选功能
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // 移除所有按钮的active类
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    // 为当前点击的按钮添加active类
-                    this.classList.add('active');
-                    
-                    // 这里可以添加实际的筛选逻辑
-                    const filterType = this.textContent;
-                    console.log('筛选类型:', filterType);
-                });
-            });
-            
-            // 卡片悬停效果
-            const caseCards = document.querySelectorAll('.case-card');
-            caseCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
-                });
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
-</script>
+    </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
