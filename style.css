@@ -115,3 +115,22 @@ body {
   height: 100%;
   cursor: pointer;
 }
+.img-row {
+  display: flex;
+  gap: 15px;
+  margin: 30px 0;
+}
+.img-item {
+  flex: 1;
+}
+.img-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+@media (max-width: 768px) {
+  .img-row {
+    flex-direction: column;
+  }
+}
