@@ -107,3 +107,11 @@ body {
 body {
   padding-top: 40px;
 }
+.fixed-tel a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
