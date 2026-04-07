@@ -1,0 +1,2 @@
+User-agent: Baiduspider
+Crawl-delay: 5
